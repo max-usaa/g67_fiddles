@@ -1,0 +1,11 @@
+/*
+---
+name: Declaring Variables
+description: Practice with Declaring Variables
+authors:
+  - Galvanize
+normalize_css: yes
+...
+*/
+
+<p>This demo will give you a playground to play around with variables.</p> 

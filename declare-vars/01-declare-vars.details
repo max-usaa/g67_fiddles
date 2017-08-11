@@ -1,7 +1,0 @@
-Everything before the line containing only '---' will not be parsed
-
----
- name: Declare Variables
- authors:
-   - Galvanize
- ...
