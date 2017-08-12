@@ -2,5 +2,5 @@
 name: Basic Forms
 authors:
   - Galvanize
-normalize_css: yes
+normalize_css: false
 ...

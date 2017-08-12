@@ -2,5 +2,5 @@
 name: Checkboxes & Radio Buttons
 authors:
   - Galvanize
-normalize_css: yes
+normalize_css: false
 ...
