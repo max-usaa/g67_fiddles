@@ -1,0 +1,11 @@
+---
+name: Welcome to Galvanize
+description: Sweet button action pulled from anime.js
+authors:
+  - Galvanize
+resources:
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js
+normalize_css: false
+lang_css: SCSS
+...
