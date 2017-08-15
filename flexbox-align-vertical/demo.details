@@ -1,0 +1,14 @@
+---
+name: CSS Display Property
+authors:
+  - Galvanize
+normalize_css: false
+...
+
+# CSS Solution
+# section article {
+#   display: flex;
+#   flex-direction: column;
+#   flex: 3;
+#   padding: 1rem;
+# }
