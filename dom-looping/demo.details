@@ -1,0 +1,22 @@
+---
+name: Looping over Elements
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
+
+var lis = document.querySelectorAll('li')
+
+for (var i = 0; i < lis.length; i++) {
+	var span = lis[i].childNodes[1]
+  var num = parseInt(span.innerText)
+  if (num < 5) {
+	  span.className += ' badge-danger'
+  } else if (num < 10) {
+    span.className += ' badge-secondary'
+  } else {
+    span.className += ' badge-primary'
+  }
+}
