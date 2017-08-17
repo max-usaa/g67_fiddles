@@ -1,0 +1,37 @@
+---
+name: Periodic Table of Elements
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elements = [
+    { name: 'Hydrogen', number: 1, symbol: 'H' },
+    { name: 'Mercury', number: 80, symbol: 'Hg' },
+    { name: 'Lead', number: 82, symbol: 'Pb' },
+    { name: 'Bismuth', number: 83, symbol: 'Bi' },
+    { name: 'Neon', number: 10, symbol: 'Ne' }
+  ]
+
+  elements.forEach(function (element) {
+    var row = document.createElement('tr')
+
+    var th = document.createElement('th')
+    th.className = 'scope'
+    th.innerText = element.number
+
+    var symbolTd = document.createElement('td')
+    symbolTd.innerText = element.symbol
+
+    var nameTd = document.createElement('td')
+    nameTd.innerText = element.name
+
+    row.appendChild(th)
+    row.appendChild(symbolTd)
+    row.appendChild(nameTd)
+    document.querySelector('tbody').appendChild(row)
+  })
+})
