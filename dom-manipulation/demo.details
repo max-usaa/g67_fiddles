@@ -1,0 +1,18 @@
+---
+name: DOM Manipulation
+authors:
+  - Galvanize
+normalize_css: false
+...
+
+var removeMe = document.querySelector('.remove-me')
+document.body.removeChild(removeMe)
+
+var link = document.querySelector('a')
+link.className = 'galvanize-link'
+link.href = 'http://galvanize.com'
+
+var h1 = document.createElement('h1')
+h1.innerHTML = 'Hello World'
+
+document.body.insertBefore(h1, document.body.children[0])
