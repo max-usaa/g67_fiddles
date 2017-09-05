@@ -1,0 +1,8 @@
+---
+name: Form Validation Patterns
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
