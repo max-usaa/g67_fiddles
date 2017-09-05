@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     	prev.remove()
     }
 
-    if (text) {
+    if (!text) {
       var alert = document.createElement('div')
       alert.className = 'alert alert-danger'
       alert.textContent = 'Please add your name! It is required.'
