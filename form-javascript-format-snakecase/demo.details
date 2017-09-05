@@ -1,0 +1,21 @@
+---
+name: JavaScript Formatting
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
+
+var input = document.getElementById('variable')
+  input.addEventListener('keyup', function (event) {
+    var text = event.target.value
+    var textArray = text.split('_')
+    var titlecaseArray = textArray.map(function (word, i) {
+      if (i == 0) return word
+    	return word ? word[0].toUpperCase() + word.slice(1) : '_'
+    })
+    var titlecase = titlecaseArray.join('')
+
+    event.target.value = titlecase
+  })
