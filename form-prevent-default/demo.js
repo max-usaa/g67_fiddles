@@ -3,32 +3,35 @@
 */
 
 // EXPLAIN:
-var form = document.getElementById('myForm')
-// EXPLAIN:
-form.addEventListener('submit', function (e) {
-	// EXPLAIN:
-	// e.preventDefault()
-
-	var name = document.getElementById('name')
-  var text = name.value
-
-	// EXPLAIN:
-	name.value = ''
+document.addEventListener('DOMContentLoaded', function () {
   // EXPLAIN:
-  name.focus()
-
+  var form = document.getElementById('myForm')
   // EXPLAIN:
-  var prev = document.querySelector('.alert')
-  if (prev) {
-	  // EXPLAIN:
-  	prev.remove()
-  }
+  form.addEventListener('submit', function (e) {
+  	// EXPLAIN:
+  	// e.preventDefault()
 
-  var alert = document.createElement('div')
-  alert.className = 'alert alert-info'
-  alert.textContent = 'Thank you for your submission, ' + text + '!'
+  	var name = document.getElementById('name')
+    var text = name.value
 
-  var row = document.querySelector('form')
-  // EXPLAIN:
-  row.append(alert)
+  	// EXPLAIN:
+  	name.value = ''
+    // EXPLAIN:
+    name.focus()
+
+    // EXPLAIN:
+    var prev = document.querySelector('.alert')
+    if (prev) {
+  	  // EXPLAIN:
+    	prev.remove()
+    }
+
+    var alert = document.createElement('div')
+    alert.className = 'alert alert-info'
+    alert.textContent = 'Thank you for your submission, ' + text + '!'
+
+    var row = document.querySelector('form')
+    // EXPLAIN:
+    row.append(alert)
+  })
 })
