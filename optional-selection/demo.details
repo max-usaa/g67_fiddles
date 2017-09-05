@@ -1,0 +1,25 @@
+---
+name: Optional Form Submit
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
+
+document.addEventListener('DOMContentLoaded', function () {
+  var items = document.querySelectorAll('li')
+  items.forEach(function (item) {
+    item.addEventListener('click', function (event) {
+      var li = event.target
+      if (li.className.includes('selected')) {
+        li.className = ''
+      } else {
+        li.className = 'selected'
+      }
+
+      var selected = document.querySelectorAll('li.selected')
+      document.querySelector('h1 span').textContent = '(' + selected.length + ')'
+    })
+  })
+})
