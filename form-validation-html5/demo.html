@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>About Me</h1>
+      <hr>
+      <form id="myForm">
+        <div class="form-group">
+          <!-- Email should be required and validate for a correct email. -->
+          <label for="name">
+            Email<span class="required">*</span>
+          </label>
+          <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+          <!-- Password is required and must be at least 8 characters that are hidden when typed. -->
+          <label for="password">
+            Password<span class="required">*</span>
+            <span class="info">(Minimum Length of 8 Characters)</span>
+          </label>
+          <input type="text" class="form-control" id="password">
+        </div>
+        <div class="form-group">
+          <!-- Website is optional but if it is there should be validated as a real URL. -->
+          <label for="website">My Website</label>
+          <input type="text" class="form-control" id="website" placeholder="http://...">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

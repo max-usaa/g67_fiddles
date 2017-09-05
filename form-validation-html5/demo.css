@@ -1,0 +1,11 @@
+.info {
+  color: #666;
+  display: inline-block;
+  margin-left: 1rem;
+  padding: 0 1rem;
+}
+
+.required {
+  color: red;
+  font-weight: bold;
+}
