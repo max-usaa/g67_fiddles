@@ -1,0 +1,40 @@
+---
+name: Chaining Timeouts
+authors:
+  - Galvanize
+resources:
+  - https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css
+normalize_css: false
+...
+
+document.addEventListener('DOMContentLoaded', function () {
+  var button = document.getElementById('transition')
+  button.addEventListener('click', function () {
+    var transition1 = document.getElementById('change-A').value
+    var transition2 = document.getElementById('change-B').value
+
+    var error = document.getElementById('error')
+    error.textContent = error.className = ''
+    if (!transition1 || !transition2) {
+      error.textContent = 'You must select both transitions!'
+      error.className = 'alert alert-danger'
+      return false
+    }
+
+    var paragraph = document.getElementById('changing')
+    paragraph.style = {}
+    setTimeout(function () {
+      changeStyle(transition1, paragraph)
+      setTimeout(function () {
+      changeStyle(transition2, paragraph)
+      }, 1000)
+    }, 1000)
+  })
+})
+
+function changeStyle (style, paragraph) {
+  if (style === 'color') paragraph.style.color = 'magenta'
+  if (style === 'background') paragraph.style.backgroundColor = 'black'
+  if (style === 'font-style') paragraph.style.fontStyle = 'italic'
+  if (style === 'font-weight') paragraph.style.fontWeight = 'bold'
+}
